@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class GroupMember {
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "group_id")
     private Group groupId;

@@ -1,6 +1,5 @@
-package com.expense_management.entity;
+package com.expense_management.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,11 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "category")
-public class Category {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class GroupRequest {
     private String name;
+    private String description;
 }

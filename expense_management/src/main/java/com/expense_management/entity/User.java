@@ -24,8 +24,8 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     @GeneratedValue
-    private Integer id;
-    private String fullname;
+    private Long id;
+    private String username;
     private String email;
     private String password;
 
@@ -69,5 +69,4 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-
 }

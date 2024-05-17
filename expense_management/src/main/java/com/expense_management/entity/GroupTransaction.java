@@ -8,13 +8,18 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "category")
-public class Category {
+@Table(name = "group_transaction")
+public class GroupTransaction {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
+    @ManyToOne
+    @JoinColumn(name = "group_id")
+    private Group groupId;
+    @ManyToOne
+    @JoinColumn(name = "transaction_id")
+    private Transaction transactionId;
 }
